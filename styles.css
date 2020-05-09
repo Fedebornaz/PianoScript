@@ -9,7 +9,12 @@ body {
   margin-bottom: 20px;
 }
 
-.piano {
+p {
+  font-family: "Lato", Helvetica, Sans-serif;
+  color: #999;
+}
+
+.keys {
   background: #111;
   width: 800px;
   height: 600px;
@@ -28,6 +33,10 @@ body {
 .key {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .white {
@@ -44,4 +53,12 @@ body {
   z-index: 2;
   margin-left: -30px;
   margin-right: -30px;
+}
+
+.white.pressed {
+  background-color: #ddd;
+}
+
+.black.pressed {
+  background-color: #555;
 }
