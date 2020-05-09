@@ -10,7 +10,9 @@ function playNote(e) {
     audio.currentTime = 0;
     audio.play();
     const pressedKey = document.querySelector(`[data-key="${e.key}"]`);
-    pressedKey.classList.add('pressed');
+    if (pressedKey) {
+      pressedKey.classList.add('pressed');
+    }
   }
   if (e.type === 'click') {
     const audio = document.querySelector(
@@ -22,16 +24,20 @@ function playNote(e) {
     audio.currentTime = 0;
     audio.play();
     const pressedKey = e.currentTarget;
-    pressedKey.classList.add('pressed');
-    setTimeout(() => {
-      pressedKey.classList.remove('pressed');
-    }, 100);
+    if (pressedKey) {
+      pressedKey.classList.add('pressed');
+      setTimeout(() => {
+        pressedKey.classList.remove('pressed');
+      }, 100);
+    }
   }
 }
 
 function removePressedClass(e) {
   const pressedKey = document.querySelector(`[data-key="${e.key}"]`);
-  pressedKey.classList.remove('pressed');
+  if (pressedKey) {
+    pressedKey.classList.remove('pressed');
+  }
 }
 
 window.addEventListener('keydown', playNote);
