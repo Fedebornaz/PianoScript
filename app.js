@@ -1,5 +1,4 @@
 const keys = document.querySelectorAll('.key');
-console.log(keys);
 
 function playNote(e) {
   if (e.type === 'keydown') {
