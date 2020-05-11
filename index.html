@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎹|PianoScript</title>
+    <title>PianoScript</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/proxy/8vwkh8YZ12c36mhxAaS02ZImKZnqPq6yjoNrU51g85IHZOZ3XDecgB9D_qvnctpP7D6lT-2XUt-SRLOwEMsibimWaDAjd7FXprgwc3ppUx2DJzkNETvn8TXhZUBWjZh-KWqZ">
 </head>
 <body>
-    <div class="keys"></div>
-        <div class="container">
-            <div data-note="do" data-key="a" class="white key"><p>A</p></div>
-            <div data-note="do#" data-key="w" class="black key"><P>W</P></div>
-            <div data-note="re" data-key="s" class="white key"><P>S</P></div>
-            <div data-note="re#" data-key="e" class="black key"><P>E</P></div>
-            <div data-note="mi" data-key="d" class="white key"><P>D</P></div>
-            <div data-note="fa" data-key="f" class="white key"><P>F</P></div>
-            <div data-note="fa#" data-key="t" class="black key"><P>T</P></div>
-            <div data-note="sol" data-key="g" class="white key"><P>G</P></div>
-            <div data-note="sol#" data-key="y" class="black key"><P>Y</P></div>
-            <div data-note="la" data-key="h" class="white key"><P>H</P></div>
-            <div data-note="la#" data-key="u" class="black key"><P>U</P></div>
-            <div data-note="si" data-key="j" class="white key"><P>J</P></div>
+    <div class="container">
+        <div class="keyboard">
+            <div class="text">
+                <h1>PianoScript</h1>
+            </div>
+            <div class="keys">
+                <div data-note="do" data-key="a" class="white key"><p>A</p></div>
+                <div data-note="do#" data-key="w" class="black key"><P>W</P></div>
+                <div data-note="re" data-key="s" class="white key"><P>S</P></div>
+                <div data-note="re#" data-key="e" class="black key"><P>E</P></div>
+                <div data-note="mi" data-key="d" class="white key"><P>D</P></div>
+                <div data-note="fa" data-key="f" class="white key"><P>F</P></div>
+                <div data-note="fa#" data-key="t" class="black key"><P>T</P></div>
+                <div data-note="sol" data-key="g" class="white key"><P>G</P></div>
+                <div data-note="sol#" data-key="y" class="black key"><P>Y</P></div>
+                <div data-note="la" data-key="h" class="white key"><P>H</P></div>
+                <div data-note="la#" data-key="u" class="black key"><P>U</P></div>
+                <div data-note="si" data-key="j" class="white key"><P>J</P></div>
+    
+                <audio data-note="do" data-key="a" src="notas/Do.wav"></audio>
+                <audio data-note="do#" data-key="w" src="notas/DoSostenido.wav"></audio>
+                <audio data-note="re" data-key="s" src="notas/Re.wav"></audio>
+                <audio data-note="re#" data-key="e" src="notas/ReSostenido.wav"></audio>
+                <audio data-note="mi" data-key="d" src="notas/Mi.wav"></audio>
+                <audio data-note="fa" data-key="f" src="notas/Fa.wav"></audio>
+                <audio data-note="fa#" data-key="t" src="notas/FaSostenido.wav"></audio>
+                <audio data-note="sol" data-key="g" src="notas/Sol.wav"></audio>
+                <audio data-note="sol#" data-key="y"src="notas/SolSostenido.wav"></audio>
+                <audio data-note="la" data-key="h" src="notas/La.wav"></audio>
+                <audio data-note="la#" data-key="u" src="notas/LaSostenido.wav"></audio>
+                <audio data-note="si" data-key="j" src="notas/Si.wav"></audio>
+            </div>
+        </div>    
+    </div>
+    <footer>
+        <p>Hecho con <span>♥</span> por <a target="about:_blank" href="https://github.com/Fedebornaz">Federico Bornaz</a></p>
+    </footer>
 
-            <audio data-note="do" data-key="a" src="notas/Do.wav"></audio>
-            <audio data-note="do#" data-key="w" src="notas/DoSostenido.wav"></audio>
-            <audio data-note="re" data-key="s" src="notas/Re.wav"></audio>
-            <audio data-note="re#" data-key="e" src="notas/ReSostenido.wav"></audio>
-            <audio data-note="mi" data-key="d" src="notas/Mi.wav"></audio>
-            <audio data-note="fa" data-key="f" src="notas/Fa.wav"></audio>
-            <audio data-note="fa#" data-key="t" src="notas/FaSostenido.wav"></audio>
-            <audio data-note="sol" data-key="g" src="notas/Sol.wav"></audio>
-            <audio data-note="sol#" data-key="y"src="notas/SolSostenido.wav"></audio>
-            <audio data-note="la" data-key="h" src="notas/La.wav"></audio>
-            <audio data-note="la#" data-key="u" src="notas/LaSostenido.wav"></audio>
-            <audio data-note="si" data-key="j" src="notas/Si.wav"></audio>
-        </div>
-        
-        <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

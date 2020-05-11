@@ -1,33 +1,42 @@
 body {
-  background: url("https://images.unsplash.com/photo-1519683109079-d5f539e1542f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80")
-    no-repeat center center fixed;
-  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+    url("https://images.unsplash.com/photo-1519683109079-d5f539e1542f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80")
+      no-repeat center/cover;
+  --gradient: 1turn, rgba(255, 123, 0, 0.998), rgb(255, 238, 7);
+  margin: 20px 0px 20px 0px;
   height: 100vh;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   display: flex;
-  margin-bottom: 20px;
+  flex-direction: column;
+  overflow-y: hidden;
 }
 
 p {
   font-family: "Lato", Helvetica, Sans-serif;
   color: #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-.keys {
+.keyboard {
   background: #111;
   width: 800px;
-  height: 600px;
-  position: absolute;
+  height: 530px;
   z-index: 0;
   bottom: 10px;
   box-shadow: 0px 0px 25px 5px #111;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.container {
-  display: flex;
+.keys {
   z-index: 1;
+  display: flex;
 }
 
 .key {
@@ -37,6 +46,7 @@ p {
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
+  transition: all 0.1s;
 }
 
 .white {
@@ -60,5 +70,59 @@ p {
 }
 
 .black.pressed {
-  background-color: #555;
+  background-color: #333;
+}
+
+.text {
+  font-family: "Lato", sans-serif;
+  z-index: 1;
+  background: -webkit-linear-gradient(var(--gradient));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem;
+  position: relative;
+  bottom: 80px;
+  /* right: 230px; */
+}
+
+footer {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  background: -webkit-linear-gradient(var(--gradient));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a:hover {
+  background: -webkit-linear-gradient(
+    1turn,
+    rgb(255, 238, 7),
+    rgba(255, 123, 0, 0.998)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+span {
+  display: inline-block;
+  color: rgb(255, 124, 146);
+  animation-name: latido;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+@keyframes latido {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
 }
