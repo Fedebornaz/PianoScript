@@ -1,4 +1,4 @@
-##🎹 PianoScript
+## PianoScript 🎹
 
 Piano web interactivo realizado con:
 - **HTML**
