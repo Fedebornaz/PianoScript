@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
-    url(/Img/photo-1519683109079-d5f539e1542f.jpg)
+    url("/Img/photo-1519683109079-d5f539e1542f.jpg")
       no-repeat center/cover;
   --gradient: 1turn, rgba(255, 123, 0, 0.998), rgb(255, 238, 7);
   margin: 20px 0px 20px 0px;
